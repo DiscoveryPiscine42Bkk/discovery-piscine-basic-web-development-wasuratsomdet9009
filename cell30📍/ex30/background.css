@@ -2,10 +2,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    min-height: 100vh;
     margin: 0;
     font-family: sans-serif;
-    transition: background-color 0.5s ease; /* Smooth transition for background color change */
+    transition: background-color 0.5s ease;
 }
 
 button {
@@ -14,7 +14,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #007bff; /* A default button color */
+    background-color: #007bff;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
