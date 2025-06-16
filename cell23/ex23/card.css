@@ -92,8 +92,8 @@ body {
 }
 
 .social-icons-row {
-    text-align: center; /* จัดกึ่งกลางไอคอน */
-    padding-bottom: 20px; /* ระยะห่างด้านล่างไอคอน */
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .social-icons a {
