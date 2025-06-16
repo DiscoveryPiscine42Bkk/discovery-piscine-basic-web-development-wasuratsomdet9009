@@ -1,12 +1,4 @@
-!/bin/sh
-if [ "$#" -eq 0 ]; then
-    echo "No arguments supplied"
-else
-    echo "$1"
-    if [ "$#" -ge 2 ]; then
+#!/bin/shw
+        echo "$1"
         echo "$2"
-    fi
-    if [ "$#" -ge 3 ]; then
         echo "$3"
-    fi
-fi
