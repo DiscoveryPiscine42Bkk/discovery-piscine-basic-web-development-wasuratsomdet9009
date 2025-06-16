@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.parallax-bg-1 {
+    background-image: url('https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&quality=85&auto=format&fit=max&s=1aaf31e276b20b5d12d4bee49c5a99e2');
+}
+
+.parallax-bg-2 {
+    background-image: url('https://assets-au-01.kc-usercontent.com/633d61f6-9767-024d-b5a4-f803b9cc307b/e07aa971-5863-4a86-ae7e-ace831ddca0a/article-the-top-6-dog-breeds-for-families.jpg');
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.static-section {
+    height: 50vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.static-section .message {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .parallax-section {
+        height: 80vh;
+    }
+
+    .message {
+        font-size: 1.8em;
+    }
+
+    .static-section .message {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax-section {
+        height: 70vh;
+    }
+
+    .message {
+        font-size: 1.5em;
+    }
+
+    .static-section .message {
+        font-size: 1em;
+    }
+
+    .content {
+        padding: 15px 25px;
+    }
+}
