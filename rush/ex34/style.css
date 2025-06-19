@@ -55,7 +55,7 @@ a:hover {
     background-color: deeppink;
 }
 
-.main-container {
+.main-box {
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@ a:hover {
     margin-bottom: 40px;
 }
 
-.person-container {
+.person-box {
     display: flex;
     justify-content: center;
     gap: 40px;
