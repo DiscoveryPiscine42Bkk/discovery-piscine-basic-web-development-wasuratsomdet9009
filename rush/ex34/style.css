@@ -17,6 +17,12 @@ a:hover {
     color: darkorange;
 }
 
+.titlename {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
 .nav-bar {
     background-color: hotpink;
     padding: 10px 0;
@@ -24,12 +30,16 @@ a:hover {
     text-align: center;
     position: sticky;
     top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-bar-link {
     color: white;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 5px 10px;
     font-size: 1.1em;
     font-weight: bold;
     border-radius: 8px;
@@ -118,11 +128,6 @@ a:hover {
     margin: 0;
 }
 
-
-/* =================================================== */
-/* === Styles for resume1.html & resume2.html === */
-/* =================================================== */
-
 .top-menu {
     background: hotpink;
     color: #fff;
@@ -132,6 +137,10 @@ a:hover {
     padding: 10px;
     text-align: center;
     border-bottom: 2px solid darkorange;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .top-menu a {
@@ -139,6 +148,7 @@ a:hover {
     padding: 8px 15px;
     display: inline-block;
     font-size: 16px;
+    margin: 5px 10px;
 }
 
 .top-menu a:hover {
@@ -257,4 +267,32 @@ a:hover {
     text-align: center;
     margin-right: 10px;
     color: hotpink;
+}
+.nav-bar-link, .top-menu a {
+    flex: 1; 
+    text-align: center;
+}
+.nav-bar-link {
+    min-width: 120px;
+}
+.top-menu a {
+    min-width: 100px;
+}
+@media (max-width: 768px) {
+    .nav-bar, .top-menu {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-bar-link, .top-menu a {
+        margin: 5px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .goback {
+        float: none;
+        margin-right: 0;
+        margin-top: 10px;
+    }
 }
