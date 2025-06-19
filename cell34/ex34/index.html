@@ -3,186 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าหลักเรซูเม่</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans Thai', sans-serif;
-            color: #333;
-            background-color: #f0f0f0; /* พื้นหลังสีเทาอ่อน */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-
-        .main-container {
-            background-color: #ffffff; /* พื้นหลัง container หลักสีขาว */
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .main-head {
-            margin-bottom: 30px;
-        }
-        .main-head h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 52px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            color: hotpink; /* สีหัวข้อ h1 เป็นชมพู */
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-            letter-spacing: 1px;
-        }
-        .main-head p {
-            font-size: 22px;
-            opacity: 0.9;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .person-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 2 คอลัมน์ */
-            gap: 50px; /* ระยะห่างระหว่างกล่อง */
-            margin-bottom: 40px;
-        }
-
-        .person-box-wrapper {
-            position: relative;
-        }
-
-        .person-box {
-            background-color: #ffffff; /* พื้นหลังกล่องสมาชิกเป็นสีขาว */
-            border: 3px solid hotpink; /* ขอบสีชมพู */
-            border-radius: 20px;
-            padding: 35px 45px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            color: #333;
-            min-width: 300px; /* กำหนดความกว้างขั้นต่ำ */
-        }
-        .person-box:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-            border-color: darkorange; /* เปลี่ยนสีขอบเป็นสีแสดเมื่อ hover */
-        }
-
-        .person-number {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: darkorange; /* สีพื้นหลังตัวเลขเป็นสีแสด */
-            color: #fff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            font-weight: 700;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            border: 3px solid #fff;
-        }
-
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid hotpink; /* ขอบรูปเป็นสีชมพู */
-            margin-bottom: 25px;
-            box-shadow: 0 0 0 10px rgba(255, 105, 180, 0.3); /* เงารอบนอกสีชมพูโปร่งแสง */
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .person-box:hover .profile-img {
-            border-color: darkorange; /* เปลี่ยนสีขอบรูปเป็นแสดเมื่อ hover */
-            box-shadow: 0 0 0 10px rgba(255, 165, 0, 0.3); /* เปลี่ยนเงารอบนอกเป็นแสดโปร่งแสงเมื่อ hover */
-        }
-
-        .person-box h2 {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: darkorange; /* ชื่อในกล่องเป็นสีแสด */
-        }
-        .person-box h2 a {
-            color: darkorange; /* ลิงก์ชื่อเป็นสีแสด */
-            transition: color 0.3s ease;
-        }
-        .person-box h2 a:hover {
-            color: hotpink; /* เปลี่ยนสีลิงก์ชื่อเป็นชมพูเมื่อ hover */
-        }
-
-        .person-box p {
-            font-size: 18px;
-            opacity: 0.85;
-            margin-top: 8px;
-            color: #444;
-        }
-
-        .page-footer {
-            margin-top: 40px;
-            font-size: 18px;
-            color: #777;
-            padding: 20px;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-        }
-    </style>
+    <title>หน้าหลัก - โปรเจกต์กลุ่ม</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-bar-link active">หน้าหลัก</a>
+        <a href="resume1.html" class="nav-bar-link">สมาชิกคนที่ 1</a>
+        <a href="resume2.html" class="nav-bar-link">สมาชิกคนที่ 2</a>
+    </nav>
+
     <div class="main-container">
-        <header class="main-head">
-            <h1>Our KMITL IT Portfolio</h1>
-            <p>ยินดีต้อนรับสู่หน้าเรซูเม่ของนักศึกษาคณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี<br>ภาควิชาวิศวกรรม สาขาเทคโนโลยีคอมพิวเตอร์</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Zm15LImGZ4DcerJW3F-_-pvGyLCN-vQs9g&s" alt="SIET Logo" class="siet-logo">
+
+        <header class="main-header">
+            <h1>แนะนำสมาชิกในกลุ่ม</h1>
+            <p>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี | KMITL</p>
         </header>
 
-        <main class="main-content">
-            <section class="person-grid">
-                <div class="person-box-wrapper">
-                    <div class="person-number">1</div>
-                    <div class="person-box">
-                        <img src="https://scontent.fbkk6-2.fna.fbcdn.net/v/t39.30808-6/506490782_1234667851576597_8487350800339127832_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEeQo1Tdv1zPSt9siZN2wrHifvRAx0EcYiJ-9EDHQRxiKjJfc-PbfEKLo0qF6ytCDwthHH4IKv-2tKi4SYp0pzC&_nc_ohc=ycaSrieRcuEQ7kNvwHzLV3j&_nc_oc=Adkh42a6Oz4ZKZBb9yjLfDYrPuMUI9L3jny1HUiQQRy-Xm-ZawKs7SAvxodQ1xoyk9o&_nc_zt=23&_nc_ht=scontent.fbkk6-2.fna&_nc_gid=gJL04gIyX8apdvnZ2WtmZA&oh=00_AfOBrpdOdpxljejXiaAn6DCI2cbyrVWdOtCZ69il2mK3HQ&oe=68581099" alt="รูปภาพโปรไฟล์คนที่ 1" class="profile-img">
-                        <h2><a href="resume1.html">ชื่อ-นามสกุล คนที่ 1</a></h2>
-                        <p>นักศึกษาเทคโนโลยีคอมพิวเตอร์</p>
-                    </div>
+        <div class="person-container">
+            <a href="resume1.html" class="person-card">
+                <img src="https://scontent.fbkk6-2.fna.fbcdn.net/v/t39.30808-6/339233089_191999813501726_4546452243407981329_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeE_Wq0bSjLzTzLd2yT_Jfc-PbfEKLo0qF6ytCDwthHH4IKv-2tKi4SYp0pzC&_nc_ohc=ycaSrieRcuEQ7kNvwHzLV3j&_nc_oc=Adkh42a6Oz4ZKZBb9yjLfDYrPuMUI9L3jny1HUiQQRy-Xm-ZawKs7SAvxodQ1xoyk9o&_nc_zt=23&_nc_ht=scontent.fbkk6-2.fna&_nc_gid=gJL04gIyX8apdvnZ2WtmZA&oh=00_AfOBrpdOdpxljejXiaAn6DCI2cbyrVWdOtCZ69il2mK3HQ&oe=68581099" alt="รูปภาพโปรไฟล์คนที่ 1" class="profile-img">
+                <div class="card-content">
+                    <h2>ชื่อ-นามสกุล คนที่ 1</h2>
+                    <p>คลิกเพื่อดูประวัติ</p>
                 </div>
-                <div class="person-box-wrapper">
-                    <div class="person-number">2</div>
-                    <div class="person-box">
-                        <img src="https://scontent.fbkk6-2.fna.fbcdn.net/v/t39.30808-6/480298330_1329317934925391_2112901745825510484_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHWGKN2Hg93tLJoDgop5es24gFzF3dif6HiAXMXd-J_oW0twdIJBk9Y0v2XanE5uCAF5oRut5hkllOE73DJrW8C&_nc_ohc=ngoYTM4jNSQQ7kNvwGM017G&_nc_oc=AdnWi3dZoodHk_QCWI4ZXML01Ob_Ss1VPxpKnNihcDZeuhH03Ziaau9zUgm7K9iAyv4&_nc_zt=23&_nc_ht=scontent.fbkk6-2.fna&_nc_gid=3ClJVflxQrtaC5T4XUdHSA&oh=00_AfOrKZRmgLoBISmx4zci5G6E4Q2R4mYortlZqaO7qyzU1g&oe=685822FE" alt="รูปภาพโปรไฟล์คนที่ 2" class="profile-img">
-                        <h2><a href="resume2.html">ชื่อ-นามสกุล คนที่ 2</a></h2>
-                        <p>นักศึกษาเทคโนโลยีคอมพิวเตอร์</p>
-                    </div>
+            </a>
+            
+            <a href="resume2.html" class="person-card">
+                <img src="https://scontent.fbkk6-2.fna.fbcdn.net/v/t39.30808-6/480298330_1329317934925391_2112901745825510484_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeF_g_1YyM3W7hX7Q4b_K6l-gG7n6yFzUjyAbufrIXNSPN3t0nQ2r4L_P5r_yW6k-a-B8F-Z6b-E_Z8z-q9I-g7Q&_nc_ohc=i8zO7fL1i9UQ7kNvwH_K1oP&_nc_zt=23&_nc_ht=scontent.fbkk6-2.fna&oh=00_AfD_8Z5_n-dY-C7a7K4a-t7b_z_xQ8w_i_X3K-G3Z_k_Lg&oe=665E470E" alt="รูปภาพโปรไฟล์คนที่ 2" class="profile-img">
+                <div class="card-content">
+                    <h2>ชื่อ-นามสกุล คนที่ 2</h2>
+                    <p>คลิกเพื่อดูประวัติ</p>
                 </div>
-            </section>
-        </main>
-
-        <footer class="page-footer">
-            <p>&copy; 2024 คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี ภาควิชาวิศวกรรม สาขาเทคโนโลยีคอมพิวเตอร์</p>
-        </footer>
+            </a>
+        </div>
     </div>
+
 </body>
 </html>
